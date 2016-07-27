@@ -20,6 +20,7 @@
                 @Html.ActionLink("Sushi Ville", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+				@Html.Partial("_LoginPartial")
 				<ul class="nav navbar-nav navbar-right">
 					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<!--<li>@Html.ActionLink("Menu", "Menu", "Home")</li>-->
@@ -33,9 +34,6 @@
 						</ul>
 					</li>
 					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-					<li>@Html.ActionLink("Sign In", "Login", "Account")</li>
-					<li>@Html.ActionLink("Sign Out", "LogOff", "Account")</li>
-					<li>@Html.ActionLink("Sign Up", "Register", "Account")</li>
 				</ul>
             </div>
         </div>
