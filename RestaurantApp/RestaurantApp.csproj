@@ -170,8 +170,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DrinksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -268,9 +270,15 @@
     <Content Include="Views\MenuItems\Appetizer.cshtml" />
     <Content Include="Views\MenuItems\Desert.cshtml" />
     <Content Include="Views\MenuItems\Drink.cshtml" />
+    <Content Include="Views\Drinks\Create.cshtml" />
+    <Content Include="Views\Drinks\Delete.cshtml" />
+    <Content Include="Views\Drinks\Details.cshtml" />
+    <Content Include="Views\Drinks\Edit.cshtml" />
+    <Content Include="Views\Drinks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
