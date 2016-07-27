@@ -13,7 +13,7 @@ namespace RestaurantApp
         protected void Application_Start()
         {
 			// Seed the DB 
-			// System.Data.Entity.Database.SetInitializer(new RestaurantApp.Models.SampleData());
+			System.Data.Entity.Database.SetInitializer(new RestaurantApp.Models.SampleData());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

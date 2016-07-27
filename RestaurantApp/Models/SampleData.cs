@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace RestaurantApp.Models
 {
-	public class SampleData
+	public class SampleData : DropCreateDatabaseIfModelChanges<RestaurantContext>
 	{
-		public SampleData() { }
+		protected override void Seed(RestaurantContext context)
+		{
+			// Can be initialized with all its props (fullDesc, shortDesc, etc)
+			var Drinks = new List<Drink>
+			{
+				new Drink { Name = "VODKA", ThumbNail = "~/Content/Images/vodkaT.png" }
+			};
+		}
 	}
 }
