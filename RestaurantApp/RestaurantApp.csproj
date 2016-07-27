@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -174,8 +176,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Appetizer.cs" />
+    <Compile Include="Models\Dessert.cs" />
+    <Compile Include="Models\Drink.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MainCourse.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RestaurantContext.cs" />
+    <Compile Include="Models\SampleData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
