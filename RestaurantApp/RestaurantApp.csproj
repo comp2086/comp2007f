@@ -199,7 +199,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\recipe-miso-soup-photo.png" />
+    <Content Include="Content\Images\seaweedsalad.jpg" />
     <Content Include="Content\Images\sushilanding.jpg" />
+    <Content Include="Content\Images\sweetsoursoup.jpg" />
     <Content Include="Content\Images\vodkaT.png" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -293,6 +296,7 @@
     <Content Include="Views\MainCourses\Details.cshtml" />
     <Content Include="Views\MainCourses\Edit.cshtml" />
     <Content Include="Views\MainCourses\Index.cshtml" />
+    <Content Include="Views\Appetizers\UserIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
