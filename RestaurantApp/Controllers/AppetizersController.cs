@@ -36,7 +36,8 @@ namespace RestaurantApp.Controllers
             {
                 return HttpNotFound();
             }
-            return View("MenuItems/UserDetails", appetizer);
+
+			return View("MenuItems/UserDetails", appetizer);
         }
 
         // GET: Appetizers/Create
