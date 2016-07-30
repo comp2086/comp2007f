@@ -18,7 +18,10 @@ namespace RestaurantApp.Controllers
         // GET: MainCourses
         public async Task<ActionResult> Index()
         {
-            return View(await db.MainCourses.ToListAsync());
+			ViewBag.Title = "Main Course";
+			var data = await db.MainCourses.ToListAsync();
+			if (User.Identity.IsAuthenticated) return View("MenuItems/AdminIndex", data);
+			return View("MenuItems/UserIndex", data);
         }
 
         // GET: MainCourses/Details/5

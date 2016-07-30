@@ -18,7 +18,10 @@ namespace RestaurantApp.Controllers
         // GET: Desserts
         public async Task<ActionResult> Index()
         {
-            return View(await db.Desserts.ToListAsync());
+			ViewBag.Title = "Desserts";
+			var data = await db.Desserts.ToListAsync();
+			if (User.Identity.IsAuthenticated) return View("MenuItems/AdminIndex", data);
+			return View("MenuItems/UserIndex", data);
         }
 
         // GET: Desserts/Details/5

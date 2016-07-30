@@ -2,7 +2,7 @@
 	string title = ViewBag.Title;
 }
 
-<h2>title</h2>
+<h2>@title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,7 +35,7 @@
 			case "Drinks":
 				id = item.DrinkId;
 				break;
-			case "MainCourse":
+			case "Main Course":
 				id = item.MainCourseId;
 				break;
 			case "Desserts":
