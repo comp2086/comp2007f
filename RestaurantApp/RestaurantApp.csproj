@@ -199,10 +199,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\Fullimages\777F.jpg" />
+    <Content Include="Content\Images\Fullimages\samogonF.jpg" />
     <Content Include="Content\Images\Fullimages\vodkaF.jpg" />
+    <Content Include="Content\Images\Thumbnails\777T.jpg" />
     <Content Include="Content\Images\Thumbnails\recipe-miso-soup-photo.png" />
+    <Content Include="Content\Images\Thumbnails\samogonT.jpg" />
     <Content Include="Content\Images\Thumbnails\seaweedsalad.jpg" />
-    <Content Include="Content\Images\Thumbnails\sushilanding.jpg" />
+    <Content Include="Content\Images\Fullimages\sushilanding.jpg" />
     <Content Include="Content\Images\Thumbnails\sweetsoursoup.jpg" />
     <Content Include="Content\Images\Thumbnails\vodkaT.png" />
     <Content Include="css\font-awesome.css" />

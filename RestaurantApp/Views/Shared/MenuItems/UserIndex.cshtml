@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
 	string title = ViewBag.Title;
 }
 
@@ -28,19 +28,28 @@
 					break;
 			}
 
-			<div class="col-sm-6 col-md-3">
-				<div class="thumbnail">
-					<a href="@Url.Action("Details", new { id })">
-						<img src="@Url.Content(item.ThumbNail)" , title="Click to see more" alt="Details" class="img-thumbnail" />
-					</a>
-				</div>
-				<div class="caption">
-					<h3>@item.Name</h3>
-					<h4>@string.Format("{0:C}", item.Price)</h4>
-					<p>@item.ShortDesc</p>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="thumbnail">
+								<a href="@Url.Action("Details", new { id })">
+									<img src="@Url.Content(item.ThumbNail)" , title="Click to see more" alt="Details" class="img-thumbnail" />
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="caption">
+									<h3>@item.Name</h3>
+									<h4>@string.Format("{0:C}", item.Price)</h4>
+									<p>@item.ShortDesc</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		}
-	</div>
-</div>
+
 
