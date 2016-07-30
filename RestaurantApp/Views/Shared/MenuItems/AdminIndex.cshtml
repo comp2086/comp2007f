@@ -1,0 +1,66 @@
+﻿@{
+	string title = ViewBag.Title;
+}
+
+<h2>title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Short Description
+		</th>
+		<th>
+			Full Description
+		</th>
+		<th>
+			Price
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		int id = -1;
+		switch (title)
+		{
+			case "Appetizers":
+				id = item.AppetizerId;
+				break;
+			case "Drinks":
+				id = item.DrinkId;
+				break;
+			case "MainCourse":
+				id = item.MainCourseId;
+				break;
+			case "Desserts":
+				id = item.DessertId;
+				break;
+		}
+		<tr>
+			<td>
+				@item.Name
+			</td>
+			<td>
+				@item.ShortDesc
+			</td>
+			<td>
+				@item.FullDesc
+			</td>
+			<td>
+				@item.Price
+			</td>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { id }) |
+				@Html.ActionLink("Details", "Details", new { id }) |
+				@Html.ActionLink("Delete", "Delete", new { id })
+			</td>
+		</tr>
+	}
+
+</table>
