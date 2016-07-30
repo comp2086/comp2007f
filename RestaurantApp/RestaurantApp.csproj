@@ -199,11 +199,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\Images\recipe-miso-soup-photo.png" />
-    <Content Include="Content\Images\seaweedsalad.jpg" />
-    <Content Include="Content\Images\sushilanding.jpg" />
-    <Content Include="Content\Images\sweetsoursoup.jpg" />
-    <Content Include="Content\Images\vodkaT.png" />
+    <Content Include="Content\Images\Fullimages\Shot-of-vodka.jpg" />
+    <Content Include="Content\Images\Thumbnails\recipe-miso-soup-photo.png" />
+    <Content Include="Content\Images\Thumbnails\seaweedsalad.jpg" />
+    <Content Include="Content\Images\Thumbnails\sushilanding.jpg" />
+    <Content Include="Content\Images\Thumbnails\sweetsoursoup.jpg" />
+    <Content Include="Content\Images\Thumbnails\vodkaT.png" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -272,10 +273,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\MenuItems\MainCourse.cshtml" />
-    <Content Include="Views\MenuItems\Appetizer.cshtml" />
-    <Content Include="Views\MenuItems\Desert.cshtml" />
-    <Content Include="Views\MenuItems\Drink.cshtml" />
     <Content Include="Views\Drinks\Create.cshtml" />
     <Content Include="Views\Drinks\Delete.cshtml" />
     <Content Include="Views\Drinks\Details.cshtml" />
@@ -283,7 +280,7 @@
     <Content Include="Views\Drinks\Index.cshtml" />
     <Content Include="Views\Appetizers\Create.cshtml" />
     <Content Include="Views\Appetizers\Delete.cshtml" />
-    <Content Include="Views\Appetizers\Details.cshtml" />
+    <Content Include="Views\Shared\MenuItems\UserDetails.cshtml" />
     <Content Include="Views\Appetizers\Edit.cshtml" />
     <Content Include="Views\Appetizers\Index.cshtml" />
     <Content Include="Views\Desserts\Create.cshtml" />
@@ -296,7 +293,7 @@
     <Content Include="Views\MainCourses\Details.cshtml" />
     <Content Include="Views\MainCourses\Edit.cshtml" />
     <Content Include="Views\MainCourses\Index.cshtml" />
-    <Content Include="Views\Appetizers\UserIndex.cshtml" />
+    <Content Include="Views\Shared\MenuItems\UserIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

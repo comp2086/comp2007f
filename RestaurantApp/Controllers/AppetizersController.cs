@@ -18,11 +18,8 @@ namespace RestaurantApp.Controllers
         // GET: Appetizers
         public async Task<ActionResult> Index()
         {
-            // ViewBag.Appetizers = db.Appetizers.ToListAsync();
-
-            //return View("~/Views/Appetizers/UserIndex.cshtml");
-            return View("~/Views/Appetizers/UserIndex.cshtml", await db.Appetizers.ToListAsync());
-            //return View(await db.Appetizers.ToListAsync());
+			ViewBag.Title = "Appetizers";
+			return View("MenuItems/UserIndex", await db.Appetizers.ToListAsync());
         }
 
         // GET: Appetizers/Details/5

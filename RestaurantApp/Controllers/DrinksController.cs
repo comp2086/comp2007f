@@ -18,12 +18,15 @@ namespace RestaurantApp.Controllers
         // GET: Drinks
         public async Task<ActionResult> Index()
         {
-            return View(await db.Drinks.ToListAsync());
+			ViewBag.title = "Drinks";
+            return View("MenuItems/UserIndex", await db.Drinks.ToListAsync());
         }
 
         // GET: Drinks/Details/5
         public async Task<ActionResult> Details(int? id)
         {
+			ViewBag.title = "Drinks";
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -33,7 +36,7 @@ namespace RestaurantApp.Controllers
             {
                 return HttpNotFound();
             }
-            return View(drink);
+            return View("MenuItems/UserDetails", drink);
         }
 
         // GET: Drinks/Create
