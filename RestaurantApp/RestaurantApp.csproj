@@ -211,11 +211,13 @@
     <Content Include="Content\Images\Fullimages\reddragon.jpg" />
     <Content Include="Content\Images\Fullimages\salmon.jpg" />
     <Content Include="Content\Images\Fullimages\samogonF.jpg" />
+    <Content Include="Content\Images\Fullimages\seaweedsalad.jpg" />
     <Content Include="Content\Images\Fullimages\shrimp.jpg" />
+    <Content Include="Content\Images\Fullimages\sweetsoursoup.jpg" />
     <Content Include="Content\Images\Fullimages\tea.jpg" />
     <Content Include="Content\Images\Fullimages\tuna.jpg" />
     <Content Include="Content\Images\Fullimages\vodkaF.jpg" />
-    <Content Include="Content\Images\Fullimages\water.jpg" />
+    <Content Include="Content\Images\Fullimages\water.png" />
     <Content Include="Content\Images\map.png" />
     <Content Include="Content\Images\Thumbnails\777T.jpg" />
     <Content Include="Content\Images\Thumbnails\banana.jpg" />
@@ -236,7 +238,7 @@
     <Content Include="Content\Images\Thumbnails\tea.jpg" />
     <Content Include="Content\Images\Thumbnails\tuna.jpg" />
     <Content Include="Content\Images\Thumbnails\vodkaT.png" />
-    <Content Include="Content\Images\Thumbnails\water.jpg" />
+    <Content Include="Content\Images\Thumbnails\water.png" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -314,7 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
