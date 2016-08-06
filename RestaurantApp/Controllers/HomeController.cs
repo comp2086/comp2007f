@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * App: SuchiVille
+ * File: HomeController.cs
+ * Developed by: Alex Andriishyn, Anthony Scinocco, Sam Parathuvayalil Sunny, Lyka Sunesara 
+ * Purpose: Home endpoints
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * App: SuchiVille
+ * File: DessertsController.cs
+ * Developed by: Alex Andriishyn, Anthony Scinocco, Sam Parathuvayalil Sunny, Lyka Sunesara 
+ * Purpose: Desserts endpoints
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;

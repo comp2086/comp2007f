@@ -1,3 +1,10 @@
+/*
+ * App: SuchiVille
+ * File: RestaurantContext.cs
+ * Developed by: Alex Andriishyn, Anthony Scinocco, Sam Parathuvayalil Sunny, Lyka Sunesara 
+ * Purpose: DbContext file
+ */
+
 namespace RestaurantApp.Models
 {
 	using System;

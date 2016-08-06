@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * App: SuchiVille
+ * File: SampleData.cs
+ * Developed by: Alex Andriishyn, Anthony Scinocco, Sam Parathuvayalil Sunny, Lyka Sunesara 
+ * Purpose: Data for development purposes
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

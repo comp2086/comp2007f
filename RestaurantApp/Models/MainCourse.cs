@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * App: SuchiVille
+ * File: MainCourse.cs
+ * Developed by: Alex Andriishyn, Anthony Scinocco, Sam Parathuvayalil Sunny, Lyka Sunesara 
+ * Purpose: MainCourse model
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
