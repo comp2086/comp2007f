@@ -18,10 +18,7 @@ namespace RestaurantApp.Models
 		protected override void Seed(RestaurantContext context)
 		{
 			// Can be initialized with all its props (fullDesc, shortDesc, etc)
-			var Drinks = new List<Drink>
-			{
-				new Drink { Name = "VODKA", ThumbNail = "~/Content/Images/vodkaT.png" }
-			};
+			
 		}
 	}
 }

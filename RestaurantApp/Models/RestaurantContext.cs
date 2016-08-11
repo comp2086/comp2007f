@@ -20,9 +20,5 @@ namespace RestaurantApp.Models
 
 		}
 		public virtual DbSet<Product> Products { get; set; }
-		public virtual DbSet<Drink> Drinks { get; set; }
-		public virtual DbSet<Appetizer> Appetizers { get; set; }
-		public virtual DbSet<MainCourse> MainCourses { get; set; }
-		public virtual DbSet<Dessert> Desserts { get; set; }
 	}
 }
