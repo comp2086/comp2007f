@@ -16,9 +16,9 @@ namespace RestaurantApp.Controllers
         private RestaurantContext db = new RestaurantContext();
 
         // GET: Products
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string ProductType)
         {
-            return View(await db.Products.ToListAsync());
+            return View(await db.Products.Where(p => p.ProductType == ProductType).ToListAsync());
         }
 
         // GET: Products/Details/5
