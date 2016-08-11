@@ -18,7 +18,10 @@ namespace RestaurantApp.Controllers
         // GET: Products
         public async Task<ActionResult> Index(string ProductType)
         {
-            return View(await db.Products.Where(p => p.ProductType == ProductType).ToListAsync());
+			var data = await db.Products.Where(p => p.ProductType == ProductType).ToListAsync();
+
+			if (User.Identity.IsAuthenticated) return View("AdminIndex", data);
+			return View("UserIndex", data);
         }
 
         // GET: Products/Details/5
