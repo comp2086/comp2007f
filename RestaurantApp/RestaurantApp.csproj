@@ -184,6 +184,7 @@
     <Compile Include="Models\Appetizer.cs" />
     <Compile Include="Models\Dessert.cs" />
     <Compile Include="Models\Drink.cs" />
+    <Compile Include="Models\Food.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MainCourse.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
