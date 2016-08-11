@@ -25,13 +25,13 @@ namespace RestaurantApp.Controllers
         }
 
         // GET: Products/Details/5
-        public async Task<ActionResult> Details(int? id)
+        public async Task<ActionResult> Details(int? ProductId)
         {
-            if (id == null)
+            if (ProductId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = await db.Products.FindAsync(id);
+            Product product = await db.Products.FindAsync(ProductId);
             if (product == null)
             {
                 return HttpNotFound();
