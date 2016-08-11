@@ -5,11 +5,12 @@ using System.Web;
 
 namespace RestaurantApp.Models
 {
-	public class Food
+	public class Product
 	{
-		public Food() { }
-		public virtual int FoodId { get; set; }
-		public virtual string FoodType { get; set; }
+		public Product() { }
+
+		public virtual int ProductId { get; set; }
+		public virtual string ProductType { get; set; }
 		public virtual string Name { get; set; }
 		public virtual string ThumbNail { get; set; }
 		public virtual string FullImage { get; set; }

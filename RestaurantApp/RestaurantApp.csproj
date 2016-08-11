@@ -176,15 +176,25 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainCoursesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607271728599_InitialCreate.cs" />
+    <Compile Include="Migrations\201607271728599_InitialCreate.Designer.cs">
+      <DependentUpon>201607271728599_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608112023482_second.cs" />
+    <Compile Include="Migrations\201608112023482_second.Designer.cs">
+      <DependentUpon>201608112023482_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appetizer.cs" />
     <Compile Include="Models\Dessert.cs" />
     <Compile Include="Models\Drink.cs" />
-    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MainCourse.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -314,6 +324,11 @@
     <Content Include="Views\MainCourses\Delete.cshtml" />
     <Content Include="Views\MainCourses\Edit.cshtml" />
     <Content Include="Views\Shared\MenuItems\UserIndex.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +337,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607271728599_InitialCreate.resx">
+      <DependentUpon>201607271728599_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608112023482_second.resx">
+      <DependentUpon>201608112023482_second.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

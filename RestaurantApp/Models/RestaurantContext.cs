@@ -17,8 +17,9 @@ namespace RestaurantApp.Models
 		public RestaurantContext()
 			: base("name=RestaurantConn")
 		{
-		}
 
+		}
+		public virtual DbSet<Product> Products { get; set; }
 		public virtual DbSet<Drink> Drinks { get; set; }
 		public virtual DbSet<Appetizer> Appetizers { get; set; }
 		public virtual DbSet<MainCourse> MainCourses { get; set; }
