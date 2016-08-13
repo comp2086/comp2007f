@@ -26,7 +26,7 @@ namespace RestaurantApp.Models
 			return GetCart(controller.HttpContext);
 		}
 
-		public void AddToCart(Product product)
+		public void AddToCart(Product product, int productQuantity)
 		{
 			// Get the matching cart and product instances
 			var cartItem = storeDB.Carts.SingleOrDefault(
@@ -40,16 +40,15 @@ namespace RestaurantApp.Models
 				{
 					ProductId = product.ProductId,
 					CartId = ShoppingCartId,
-					Count = 1,
+					Count = productQuantity,
 					DateCreated = DateTime.Now
 				};
 				storeDB.Carts.Add(cartItem);
 			}
 			else
 			{
-				// If the item does exist in the cart, 
-				// then add one to the quantity
-				cartItem.Count++;
+				// If the item does exist in the cart add quantity
+				cartItem.Count = productQuantity;
 			}
 			// Save changes
 			storeDB.SaveChanges();

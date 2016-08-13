@@ -28,7 +28,8 @@ namespace RestaurantApp.Controllers
 			return View(viewModel);
 		}
 		//
-		// GET: /Store/AddToCart/5
+		// POST: /ShoppingCart/AddToCart/5
+        [HttpPost]
 		public ActionResult AddToCart(int id)
 		{
 			// Retrieve the album from the database
@@ -38,10 +39,14 @@ namespace RestaurantApp.Controllers
 			// Add it to the shopping cart
 			var cart = ShoppingCart.GetCart(this.HttpContext);
 
-			cart.AddToCart(addedProduct);
+            //get quantity of item
+            var productQuantity = Int32.Parse(Request["productQuantity"].ToString());
 
-			// Go back to the main store page for more shopping
-			return RedirectToAction("Index");
+			cart.AddToCart(addedProduct, productQuantity);
+
+            // Go back to the main store page for more shopping
+            //return RedirectToAction("~/Views/Products/UserIndex.cshtml");
+            return Redirect(Request.UrlReferrer.ToString());
 		}
 		//
 		// AJAX: /ShoppingCart/RemoveFromCart/5
