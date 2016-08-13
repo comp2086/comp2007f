@@ -16,6 +16,6 @@ namespace RestaurantApp.Models
 		public virtual string FullImage { get; set; }
 		public virtual string ShortDesc { get; set; }
 		public virtual string FullDesc { get; set; }
-		public virtual double Price { get; set; }
+		public virtual decimal Price { get; set; }
 	}
 }
