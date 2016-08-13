@@ -27,6 +27,11 @@
 									<h3>@item.Name</h3>
 									<h4>@string.Format("{0:C}", item.Price)</h4>
 									<p>@item.ShortDesc</p>
+                                    @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = "/ShoppingCart/AddToCart/" + @item.ProductId }))
+                                    {
+                                        <input type="number" id="productQuantity" name="productQuantity" min="0" max="30" placeholder="0" />
+                                        <input type="submit" class="btn btn-success btn-sm" value="Add To Cart" />
+                                    }
 								</div>
 							</div>
 						</div>
@@ -36,3 +41,6 @@
 		}
 	</div>
 </div>
+<script type="text/javascript">
+
+</script>
