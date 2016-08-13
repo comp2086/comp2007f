@@ -17,7 +17,10 @@ namespace RestaurantApp.Models
 	{
 		protected override void Seed(RestaurantContext context)
 		{
-			// Can be initialized with all its props (fullDesc, shortDesc, etc)
+			new List<Product>
+			{
+				new Product { ProductType="appetizer", Name="Sweet and Sour Soup", ThumbNail="/Assets/Images/Thumbnails/sweetsoursoup.jpg", FullImage="/Assets/Images/Fullimages/sweetsoursoup.jpg", ShortDesc="Short descroption", FullDesc="Full description", Price=5.25 },
+			}.ForEach(p => context.Products.Add(p));
 			
 		}
 	}

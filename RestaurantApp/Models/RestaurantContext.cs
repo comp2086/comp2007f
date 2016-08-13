@@ -15,7 +15,7 @@ namespace RestaurantApp.Models
 	public partial class RestaurantContext : DbContext
 	{
 		public RestaurantContext()
-			: base("name=RestaurantConn")
+			: base("name=DevelopmentConn")
 		{
 
 		}
