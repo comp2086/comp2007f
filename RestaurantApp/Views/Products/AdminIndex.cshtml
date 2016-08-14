@@ -1,0 +1,50 @@
+﻿@{
+	string title = ViewBag.Title;
+}
+
+<h2>@title</h2>
+
+<p>
+	@Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Short Description
+		</th>
+		<th>
+			Full Description
+		</th>
+		<th>
+			Price
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.Name
+			</td>
+			<td>
+				@item.ShortDesc
+			</td>
+			<td>
+				@item.FullDesc
+			</td>
+			<td>
+				@item.Price
+			</td>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { item.ProductId }) |
+				@Html.ActionLink("Details", "Details", new { item.ProductId }) |
+				@Html.ActionLink("Delete", "Delete", new { item.ProductId })
+			</td>
+		</tr>
+	}
+
+</table>

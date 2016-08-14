@@ -1,0 +1,46 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+	<div class="col-md-10">
+
+		<br />
+		<h1>@ViewBag.Title</h1>
+		<br />
+
+		@foreach (var item in Model)
+		{
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="thumbnail">
+								<a href="@Url.Action("Details", new { item.ProductId })">
+									<img src="@Url.Content(item.ThumbNail)" , title="Click to see more" alt="Details" class="img-thumbnail" />
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="caption">
+									<h3>@item.Name</h3>
+									<h4>@string.Format("{0:C}", item.Price)</h4>
+									<p>@item.ShortDesc</p>
+                                    @using (Html.BeginForm(null, null, FormMethod.Post, new { @action = "/ShoppingCart/AddToCart/" + @item.ProductId }))
+                                    {
+                                        <input type="number" id="productQuantity" name="productQuantity" min="0" max="30" placeholder="0" />
+                                        <input type="submit" class="btn btn-success btn-sm" value="Add To Cart" />
+                                    }
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+<script type="text/javascript">
+
+</script>

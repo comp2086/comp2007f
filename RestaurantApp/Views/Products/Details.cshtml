@@ -1,0 +1,23 @@
+﻿@{
+	string title = ViewBag.Title;
+}
+
+<div class="container">
+	<br />
+	<h1>@Model.Name</h1>
+	<br />
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="col-md-12 text-center">
+				<img src="@Url.Content(Model.FullImage)" />
+				<div class="caption">
+					<h3></h3>
+					<h4>@string.Format("{0:C}", Model.Price)</h4>
+					<p>@Model.FullDesc</p>
+				</div>
+				<h3><a href="@Url.Action("Index", "Products", new { ProductType = Model.ProductType })">Back</a></h3>
+			</div>
+		</div>
+	</div>
+</div>
+

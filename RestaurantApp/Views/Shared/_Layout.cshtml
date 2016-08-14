@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/css/font-awesome.min.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container">
+        <!-- brand name  -->
+        <div class="row center-block">
+            <div class="brand">SUSHIVILLE</div>
+                <div class="address-bar">Eating Healthy Can Be Delicious Too! </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Sushi Ville", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="Default.aspx">Sunesara Delicacy</a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+				@Html.Partial("_LoginPartial")
+				<ul class="nav navbar-nav navbar-right">
+					<li>@Html.ActionLink("Home", "Index", "Home")</li>
+					<!--<li>@Html.ActionLink("Menu", "Menu", "Home")</li>-->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/Products?ProductType=appetizer">Appetizer's</a></li>
+							<li><a href="/Products?ProductType=maincourse">Main Courses</a></li>
+							<li><a href="/Products?ProductType=dessert">Deserts</a></li>
+							<li><a href="/Products?ProductType=drink">Drinks</a></li>
+						</ul>
+					</li>
+					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+					<li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
+				</ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+        <hr />
+        <br />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Sushi Ville</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
