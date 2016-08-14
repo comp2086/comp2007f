@@ -44,8 +44,7 @@ namespace RestaurantApp.Controllers
 
 			cart.AddToCart(addedProduct, productQuantity);
 
-            // Go back to the main store page for more shopping
-            //return RedirectToAction("~/Views/Products/UserIndex.cshtml");
+            // Go back to the menu page the user was previously viewing
             return Redirect(Request.UrlReferrer.ToString());
 		}
 		//
