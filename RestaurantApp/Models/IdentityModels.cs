@@ -21,7 +21,7 @@ namespace RestaurantApp.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DevelopmentConnection", throwIfV1Schema: false)
+            : base("DevelopmentConn", throwIfV1Schema: false)
         {
         }
 
