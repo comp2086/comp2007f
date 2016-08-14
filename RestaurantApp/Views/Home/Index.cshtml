@@ -2,11 +2,18 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="container">
-    <div class="row text-center">
-        <h1>Enjoy our Beautiful Sushi</h1>
-    </div>
-    <div class="col-lg-10 col-md-10">
-        <img src="~/Assets/Images/Fullimages/sushilanding.jpg" alt="Delicious Sushi" width="1080" height="650"/>
+<div class="container home-content">
+    <div class="row">
+        <div class="col-md-7">
+            <a href="@Url.Action("Menu","Menu")">
+                <img class="img-responsive home-image" src="~/Assets/Images/Fullimages/shima.jpg" alt="sushi" width="1000" height="100" />
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h5>Check Out Our Exciting Menu Here! </h5>
+            <p>Check out our delicious food items specially home made by our master chef.</p>
+
+            <a href="@Url.Action("Menu","Menu")" class="btn btn-info"><i class="fa fa-book fa-lg"></i>View Menu</a>
+        </div>
     </div>
 </div>
