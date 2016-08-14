@@ -30,7 +30,7 @@
 		<tr id="row-@item.RecordId">
 			<td>
 				@Html.ActionLink(item.Product.Name, "Details",
-			   "Products", new { id = item.ProductId }, null)
+			   "Products", new { ProductId = item.ProductId }, null)
 			</td>
 			<td>
 				@item.Product.Price
