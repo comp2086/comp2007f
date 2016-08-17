@@ -11,14 +11,7 @@
 
 </head>
 <body>
-    <div class="container">
-        <!-- brand name  -->
-        <div class="row center-block">
-            <div class="brand">SUSHIVILLE</div>
-                <div class="address-bar">Eating Healthy Can Be Delicious Too! </div>
-        </div>
-    </div>
-
+   
     <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -30,12 +23,16 @@
                 @Html.ActionLink("SushiVille", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="Default.aspx">SUSHIVILLE</a>
+               
 
             </div>
             <div class="navbar-collapse collapse">
 				@Html.Partial("_LoginPartial")
+                <ul class="nav navbar-brand navbar-left">
+                    @Html.ActionLink("SushiVille", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </ul>
 				<ul class="nav navbar-nav navbar-right">
+                 
 					<li>@Html.ActionLink("Home", "Index", "Home")</li>
 					<!--<li>@Html.ActionLink("Menu", "Menu", "Home")</li>-->
 					<li class="dropdown">

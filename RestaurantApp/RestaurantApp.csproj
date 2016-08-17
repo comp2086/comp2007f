@@ -195,6 +195,11 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\shima.jpg" />
+    <Content Include="Assets\Images\sushiville.png" />
+    <Content Include="Assets\Images\sushi_backgrounds.jpg" />
+    <Content Include="Assets\Images\Thumbnails\shima.jpg" />
+    <Content Include="Assets\Images\Thumbnails\sushi_backgrounds.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
