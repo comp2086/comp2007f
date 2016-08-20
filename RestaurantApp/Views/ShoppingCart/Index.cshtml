@@ -3,7 +3,7 @@
 	ViewBag.Title = "Shopping Cart";
 }
 
-<h3>
+<h3 style="color: white;">
 	<em>Review</em> your cart:
 </h3>
 <p class="button">
@@ -11,52 +11,56 @@
 </p>
 <div id="update-message">
 </div>
-<table>
-	<tr>
-		<th>
-			Product Name
-		</th>
-		<th>
-			Price (each)
-		</th>
-		<th>
-			Quantity
-		</th>
-		<th></th>
-	</tr>
-	@foreach (var item in
-				Model.CartItems)
-	{
-		<tr id="row-@item.RecordId">
-			<td>
-				@Html.ActionLink(item.Product.Name, "Details",
+<table class="table table-responsive">
+	<thead>
+		<tr style="color: white;">
+			<th>
+				Product Name
+			</th>
+			<th>
+				Price (each)
+			</th>
+			<th>
+				Quantity
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in
+					Model.CartItems)
+		{
+			<tr id="row-@item.RecordId">
+				<td>
+					@Html.ActionLink(item.Product.Name, "Details",
 			   "Products", new { ProductId = item.ProductId }, null)
+				</td>
+				<td style="color: green;">
+					@item.Product.Price
+				</td>
+				<td id="item-count-@item.ProductId" style="color: green;">
+					@item.Count
+				</td>
+				<td>
+					<a href="#" class="RemoveLink"
+					   data-id="@item.RecordId">
+						Remove
+						from cart
+					</a>
+				</td>
+			</tr>
+		}
+		<tr>
+			<td style="color: white;">
+				Total
 			</td>
-			<td>
-				@item.Product.Price
-			</td>
-			<td id="item-count-@item.ProductId">
-				@item.Count
-			</td>
-			<td>
-				<a href="#" class="RemoveLink"
-				   data-id="@item.RecordId">
-					Remove
-					from cart
-				</a>
+			<td></td>
+			<td></td>
+			<td id="cart-total" style="color: green;">
+				@Model.CartTotal
 			</td>
 		</tr>
-	}
-	<tr>
-		<td>
-			Total
-		</td>
-		<td></td>
-		<td></td>
-		<td id="cart-total">
-			@Model.CartTotal
-		</td>
-	</tr>
+	</tbody>
 </table>
 
 
