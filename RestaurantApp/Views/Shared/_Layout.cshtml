@@ -53,12 +53,20 @@
 
     <div class="container body-content">
         @RenderBody()
-
-
-        <hr />
         <br />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Sushi Ville</p>
+        
+    </div>
+    <div class="navbar navbar-bottom">
+        <footer class="custom-footer">
+            <hr />
+            <div class="address-bar text-center">
+                <p class="footer-brand"> &copy;@DateTime.Now.Year SushiVille </p>
+                <!-- footer social media icon links -->
+                <a href="#"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="#"><i class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
         </footer>
     </div>
 
