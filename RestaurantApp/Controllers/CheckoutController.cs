@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mail;
+using System.Web.Security;
 using RestaurantApp.Models;
 
 namespace RestaurantApp.Controllers
@@ -56,7 +58,26 @@ namespace RestaurantApp.Controllers
                 //process order
                 var cart = ShoppingCart.GetCart(this.HttpContext);
                 cart.CreateOrder(order);
+                try
+                {
+                    //send email confirmation to user
+                    SmtpClient smtpClient = new SmtpClient("smtp.mailgun.org");
+                    smtpClient.Credentials = new System.Net.NetworkCredential("postmaster@sandbox65ef3467a31b49f095da21a242685ccd.mailgun.org", "961e1cc53fff29a55bd82962b021b6c8");
+                    smtpClient.UseDefaultCredentials = true;
+                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtpClient.EnableSsl = true;
+                    MailMessage mail = new MailMessage();
 
+                    mail.From = new MailAddress("no-reply@sushiville.ca", "Sushi Ville");
+                    //connection to db times out here sometimes, but usually works
+                    mail.To.Add(new MailAddress(Membership.GetUser(User.Identity.Name).Email));
+                    smtpClient.Send(mail);
+                }
+                catch
+                {
+                    Console.Write("ERROR: Email not sent");
+                }
+                
                 return RedirectToAction("Complete", new { id = order.OrderId });
             }else
             {
